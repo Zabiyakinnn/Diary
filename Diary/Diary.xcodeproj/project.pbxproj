@@ -13,6 +13,13 @@
 		C2C7467C2DE99A3700A73D17 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C7467B2DE99A3700A73D17 /* ViewController.swift */; };
 		C2C746812DE99A3A00A73D17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2C746802DE99A3A00A73D17 /* Assets.xcassets */; };
 		C2C746842DE99A3A00A73D17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2C746822DE99A3A00A73D17 /* LaunchScreen.storyboard */; };
+		C2C746902DE9A01700A73D17 /* RegistrView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C7468F2DE9A01700A73D17 /* RegistrView.swift */; };
+		C2C746922DE9A02800A73D17 /* RegistrViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C746912DE9A02800A73D17 /* RegistrViewController.swift */; };
+		C2C746982DE9A69A00A73D17 /* 03_NTSomic-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C2C746942DE9A69A00A73D17 /* 03_NTSomic-Bold.ttf */; };
+		C2C746992DE9A69A00A73D17 /* 01_NTSomic-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C2C746952DE9A69A00A73D17 /* 01_NTSomic-Regular.ttf */; };
+		C2C7469A2DE9A69A00A73D17 /* 02_NTSomic-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C2C746962DE9A69A00A73D17 /* 02_NTSomic-Medium.ttf */; };
+		C2C7469B2DE9A69A00A73D17 /* NT Somic-VF.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C2C746972DE9A69A00A73D17 /* NT Somic-VF.ttf */; };
+		C2C7469D2DEA055E00A73D17 /* RegistrViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C7469C2DEA055E00A73D17 /* RegistrViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +32,13 @@
 		C2C746802DE99A3A00A73D17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C2C746832DE99A3A00A73D17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C2C746852DE99A3A00A73D17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2C7468F2DE9A01700A73D17 /* RegistrView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrView.swift; sourceTree = "<group>"; };
+		C2C746912DE9A02800A73D17 /* RegistrViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrViewController.swift; sourceTree = "<group>"; };
+		C2C746942DE9A69A00A73D17 /* 03_NTSomic-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "03_NTSomic-Bold.ttf"; path = "../../../../Шрифты/NT Somic/03_NTSomic-Bold.ttf"; sourceTree = "<group>"; };
+		C2C746952DE9A69A00A73D17 /* 01_NTSomic-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "01_NTSomic-Regular.ttf"; path = "../../../../Шрифты/NT Somic/01_NTSomic-Regular.ttf"; sourceTree = "<group>"; };
+		C2C746962DE9A69A00A73D17 /* 02_NTSomic-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "02_NTSomic-Medium.ttf"; path = "../../../../Шрифты/NT Somic/02_NTSomic-Medium.ttf"; sourceTree = "<group>"; };
+		C2C746972DE9A69A00A73D17 /* NT Somic-VF.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NT Somic-VF.ttf"; path = "../../../../Шрифты/NT Somic/NT Somic-VF.ttf"; sourceTree = "<group>"; };
+		C2C7469C2DEA055E00A73D17 /* RegistrViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrViewModel.swift; sourceTree = "<group>"; };
 		E93970BC104DC5FBA960B079 /* Pods_Diary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Diary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -69,6 +83,9 @@
 		C2C746762DE99A3700A73D17 /* Diary */ = {
 			isa = PBXGroup;
 			children = (
+				C2C746932DE9A68700A73D17 /* Fonts */,
+				C2C7468C2DE99FD800A73D17 /* Auth */,
+				C2C7468B2DE99FD000A73D17 /* Registr */,
 				C2C746772DE99A3700A73D17 /* AppDelegate.swift */,
 				C2C746792DE99A3700A73D17 /* SceneDelegate.swift */,
 				C2C7467B2DE99A3700A73D17 /* ViewController.swift */,
@@ -79,13 +96,56 @@
 			path = Diary;
 			sourceTree = "<group>";
 		};
+		C2C7468B2DE99FD000A73D17 /* Registr */ = {
+			isa = PBXGroup;
+			children = (
+				C2C7468D2DE99FED00A73D17 /* View */,
+				C2C7468E2DE99FF800A73D17 /* ViewModel */,
+			);
+			path = Registr;
+			sourceTree = "<group>";
+		};
+		C2C7468C2DE99FD800A73D17 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		C2C7468D2DE99FED00A73D17 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C2C7468F2DE9A01700A73D17 /* RegistrView.swift */,
+				C2C746912DE9A02800A73D17 /* RegistrViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C2C7468E2DE99FF800A73D17 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C2C7469C2DEA055E00A73D17 /* RegistrViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C2C746932DE9A68700A73D17 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C2C746952DE9A69A00A73D17 /* 01_NTSomic-Regular.ttf */,
+				C2C746962DE9A69A00A73D17 /* 02_NTSomic-Medium.ttf */,
+				C2C746942DE9A69A00A73D17 /* 03_NTSomic-Bold.ttf */,
+				C2C746972DE9A69A00A73D17 /* NT Somic-VF.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		EA936FCCB5B8F82CF96EF783 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				9BF4264E86DF3E35B388FAAE /* Pods-Diary.debug.xcconfig */,
 				979EE8A5F0CE8350E0F1D8C0 /* Pods-Diary.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -151,6 +211,10 @@
 			files = (
 				C2C746842DE99A3A00A73D17 /* LaunchScreen.storyboard in Resources */,
 				C2C746812DE99A3A00A73D17 /* Assets.xcassets in Resources */,
+				C2C746992DE9A69A00A73D17 /* 01_NTSomic-Regular.ttf in Resources */,
+				C2C7469B2DE9A69A00A73D17 /* NT Somic-VF.ttf in Resources */,
+				C2C746982DE9A69A00A73D17 /* 03_NTSomic-Bold.ttf in Resources */,
+				C2C7469A2DE9A69A00A73D17 /* 02_NTSomic-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,9 +267,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2C746922DE9A02800A73D17 /* RegistrViewController.swift in Sources */,
+				C2C7469D2DEA055E00A73D17 /* RegistrViewModel.swift in Sources */,
 				C2C7467C2DE99A3700A73D17 /* ViewController.swift in Sources */,
 				C2C746782DE99A3700A73D17 /* AppDelegate.swift in Sources */,
 				C2C7467A2DE99A3700A73D17 /* SceneDelegate.swift in Sources */,
+				C2C746902DE9A01700A73D17 /* RegistrView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +417,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6QJHMJC74R;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Diary/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -377,6 +446,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6QJHMJC74R;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Diary/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
