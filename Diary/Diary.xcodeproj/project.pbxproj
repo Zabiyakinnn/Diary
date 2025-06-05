@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		4020D83766E9369BD97A1140 /* Pods_Diary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E93970BC104DC5FBA960B079 /* Pods_Diary.framework */; };
+		C235FE9E2DF1D4A300C73A5E /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C235FE9D2DF1D4A300C73A5E /* AuthViewController.swift */; };
+		C235FEA22DF1D4F700C73A5E /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C235FEA12DF1D4F700C73A5E /* AuthView.swift */; };
+		C235FEA52DF1E18E00C73A5E /* WindowCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C235FEA42DF1E18E00C73A5E /* WindowCase.swift */; };
 		C2C746782DE99A3700A73D17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C746772DE99A3700A73D17 /* AppDelegate.swift */; };
 		C2C7467A2DE99A3700A73D17 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C746792DE99A3700A73D17 /* SceneDelegate.swift */; };
 		C2C7467C2DE99A3700A73D17 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C7467B2DE99A3700A73D17 /* ViewController.swift */; };
@@ -25,6 +28,9 @@
 /* Begin PBXFileReference section */
 		979EE8A5F0CE8350E0F1D8C0 /* Pods-Diary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Diary.release.xcconfig"; path = "Target Support Files/Pods-Diary/Pods-Diary.release.xcconfig"; sourceTree = "<group>"; };
 		9BF4264E86DF3E35B388FAAE /* Pods-Diary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Diary.debug.xcconfig"; path = "Target Support Files/Pods-Diary/Pods-Diary.debug.xcconfig"; sourceTree = "<group>"; };
+		C235FE9D2DF1D4A300C73A5E /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		C235FEA12DF1D4F700C73A5E /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		C235FEA42DF1E18E00C73A5E /* WindowCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowCase.swift; sourceTree = "<group>"; };
 		C2C746742DE99A3700A73D17 /* Diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Diary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2C746772DE99A3700A73D17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2C746792DE99A3700A73D17 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +68,30 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C235FE9B2DF1D48100C73A5E /* VIew */ = {
+			isa = PBXGroup;
+			children = (
+				C235FE9D2DF1D4A300C73A5E /* AuthViewController.swift */,
+				C235FEA12DF1D4F700C73A5E /* AuthView.swift */,
+			);
+			path = VIew;
+			sourceTree = "<group>";
+		};
+		C235FE9C2DF1D48A00C73A5E /* VIewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VIewModel;
+			sourceTree = "<group>";
+		};
+		C235FEA32DF1E18000C73A5E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C235FEA42DF1E18E00C73A5E /* WindowCase.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		C2C7466B2DE99A3700A73D17 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +113,7 @@
 		C2C746762DE99A3700A73D17 /* Diary */ = {
 			isa = PBXGroup;
 			children = (
+				C235FEA32DF1E18000C73A5E /* Model */,
 				C2C746932DE9A68700A73D17 /* Fonts */,
 				C2C7468C2DE99FD800A73D17 /* Auth */,
 				C2C7468B2DE99FD000A73D17 /* Registr */,
@@ -108,6 +139,8 @@
 		C2C7468C2DE99FD800A73D17 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				C235FE9B2DF1D48100C73A5E /* VIew */,
+				C235FE9C2DF1D48A00C73A5E /* VIewModel */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -270,8 +303,11 @@
 				C2C746922DE9A02800A73D17 /* RegistrViewController.swift in Sources */,
 				C2C7469D2DEA055E00A73D17 /* RegistrViewModel.swift in Sources */,
 				C2C7467C2DE99A3700A73D17 /* ViewController.swift in Sources */,
+				C235FE9E2DF1D4A300C73A5E /* AuthViewController.swift in Sources */,
 				C2C746782DE99A3700A73D17 /* AppDelegate.swift in Sources */,
 				C2C7467A2DE99A3700A73D17 /* SceneDelegate.swift in Sources */,
+				C235FEA52DF1E18E00C73A5E /* WindowCase.swift in Sources */,
+				C235FEA22DF1D4F700C73A5E /* AuthView.swift in Sources */,
 				C2C746902DE9A01700A73D17 /* RegistrView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

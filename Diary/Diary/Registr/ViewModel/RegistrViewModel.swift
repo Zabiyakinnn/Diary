@@ -7,8 +7,14 @@
 
 import Foundation
 
+enum PasswordMatchResult {
+    case done // успех
+    case misDone // пароли не совпадают
+    case toShort // короткий пароль
+    case empty // остальное
+}
+
 final class RegistrViewModel {
-    
     
     /// проверка введенного пароля
     /// - Parameters:
@@ -28,9 +34,3 @@ final class RegistrViewModel {
     }
 }
 
-enum PasswordMatchResult {
-    case done // успех
-    case misDone // пароли не совпадают
-    case toShort // короткий пароль
-    case empty // остальное
-}
