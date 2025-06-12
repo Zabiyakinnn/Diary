@@ -11,6 +11,9 @@
 		C235FE9E2DF1D4A300C73A5E /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C235FE9D2DF1D4A300C73A5E /* AuthViewController.swift */; };
 		C235FEA22DF1D4F700C73A5E /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C235FEA12DF1D4F700C73A5E /* AuthView.swift */; };
 		C235FEA52DF1E18E00C73A5E /* WindowCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C235FEA42DF1E18E00C73A5E /* WindowCase.swift */; };
+		C2B8ECAF2DF2F6A400DB6444 /* MyTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B8ECAE2DF2F6A400DB6444 /* MyTaskViewController.swift */; };
+		C2B8ECB22DF2F73600DB6444 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B8ECB12DF2F73600DB6444 /* TabBarViewController.swift */; };
+		C2B8ECB52DF2FD6000DB6444 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B8ECB42DF2FD6000DB6444 /* AuthService.swift */; };
 		C2C746782DE99A3700A73D17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C746772DE99A3700A73D17 /* AppDelegate.swift */; };
 		C2C7467A2DE99A3700A73D17 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C746792DE99A3700A73D17 /* SceneDelegate.swift */; };
 		C2C7467C2DE99A3700A73D17 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C7467B2DE99A3700A73D17 /* ViewController.swift */; };
@@ -31,6 +34,9 @@
 		C235FE9D2DF1D4A300C73A5E /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		C235FEA12DF1D4F700C73A5E /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		C235FEA42DF1E18E00C73A5E /* WindowCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowCase.swift; sourceTree = "<group>"; };
+		C2B8ECAE2DF2F6A400DB6444 /* MyTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTaskViewController.swift; sourceTree = "<group>"; };
+		C2B8ECB12DF2F73600DB6444 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		C2B8ECB42DF2FD6000DB6444 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		C2C746742DE99A3700A73D17 /* Diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Diary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2C746772DE99A3700A73D17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2C746792DE99A3700A73D17 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +98,38 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		C2B8ECAC2DF2F66500DB6444 /* MyTask */ = {
+			isa = PBXGroup;
+			children = (
+				C2B8ECAD2DF2F68100DB6444 /* View */,
+			);
+			path = MyTask;
+			sourceTree = "<group>";
+		};
+		C2B8ECAD2DF2F68100DB6444 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C2B8ECAE2DF2F6A400DB6444 /* MyTaskViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C2B8ECB02DF2F71700DB6444 /* TabBarViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C2B8ECB12DF2F73600DB6444 /* TabBarViewController.swift */,
+			);
+			path = TabBarViewController;
+			sourceTree = "<group>";
+		};
+		C2B8ECB32DF2FD4F00DB6444 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				C2B8ECB42DF2FD6000DB6444 /* AuthService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		C2C7466B2DE99A3700A73D17 = {
 			isa = PBXGroup;
 			children = (
@@ -113,8 +151,11 @@
 		C2C746762DE99A3700A73D17 /* Diary */ = {
 			isa = PBXGroup;
 			children = (
+				C2B8ECB32DF2FD4F00DB6444 /* Service */,
 				C235FEA32DF1E18000C73A5E /* Model */,
 				C2C746932DE9A68700A73D17 /* Fonts */,
+				C2B8ECB02DF2F71700DB6444 /* TabBarViewController */,
+				C2B8ECAC2DF2F66500DB6444 /* MyTask */,
 				C2C7468C2DE99FD800A73D17 /* Auth */,
 				C2C7468B2DE99FD000A73D17 /* Registr */,
 				C2C746772DE99A3700A73D17 /* AppDelegate.swift */,
@@ -200,6 +241,8 @@
 			dependencies = (
 			);
 			name = Diary;
+			packageProductDependencies = (
+			);
 			productName = Diary;
 			productReference = C2C746742DE99A3700A73D17 /* Diary.app */;
 			productType = "com.apple.product-type.application";
@@ -228,6 +271,8 @@
 				Base,
 			);
 			mainGroup = C2C7466B2DE99A3700A73D17;
+			packageReferences = (
+			);
 			productRefGroup = C2C746752DE99A3700A73D17 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -302,11 +347,14 @@
 			files = (
 				C2C746922DE9A02800A73D17 /* RegistrViewController.swift in Sources */,
 				C2C7469D2DEA055E00A73D17 /* RegistrViewModel.swift in Sources */,
+				C2B8ECB22DF2F73600DB6444 /* TabBarViewController.swift in Sources */,
+				C2B8ECB52DF2FD6000DB6444 /* AuthService.swift in Sources */,
 				C2C7467C2DE99A3700A73D17 /* ViewController.swift in Sources */,
 				C235FE9E2DF1D4A300C73A5E /* AuthViewController.swift in Sources */,
 				C2C746782DE99A3700A73D17 /* AppDelegate.swift in Sources */,
 				C2C7467A2DE99A3700A73D17 /* SceneDelegate.swift in Sources */,
 				C235FEA52DF1E18E00C73A5E /* WindowCase.swift in Sources */,
+				C2B8ECAF2DF2F6A400DB6444 /* MyTaskViewController.swift in Sources */,
 				C235FEA22DF1D4F700C73A5E /* AuthView.swift in Sources */,
 				C2C746902DE9A01700A73D17 /* RegistrView.swift in Sources */,
 			);

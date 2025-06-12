@@ -38,11 +38,16 @@ final class RegistrViewController: UIViewController {
     
     private func setupButton() {
         registrView.registrButton.addTarget(self, action: #selector(registrButtonTapped), for: .touchUpInside)
+        registrView.yesAccount.addTarget(self, action: #selector(yesAccountTapped), for: .touchUpInside)
     }
     
     private func setupUI() {
         registrView.passwordUser.addTarget(self, action: #selector(passwordFieldsDidChange), for: .editingChanged)
         registrView.returnPasswordUser.addTarget(self, action: #selector(passwordFieldsDidChange), for: .editingChanged)
+    }
+    
+    @objc private func yesAccountTapped() {
+        NotificationCenter.default.post(name: Notification.Name("routeVC"), object: nil, userInfo: ["vc": WindowCase.auth])
     }
     
     @objc private func passwordFieldsDidChange() {

@@ -26,10 +26,15 @@ final class AuthViewController: UIViewController {
     
     private func setupButton() {
         authView.showPassword.addTarget(self, action: #selector(showPasswordTapped), for: .touchUpInside)
+        authView.noAccount.addTarget(self, action: #selector(noAccountbuttonTapped), for: .touchUpInside)
     }
     
     @objc private func showPasswordTapped() {
         authView.passwordUser.isSecureTextEntry.toggle()
+    }
+    
+    @objc private func noAccountbuttonTapped() {
+        NotificationCenter.default.post(name: Notification.Name("routeVC"), object: nil, userInfo: ["vc": WindowCase.registr])
     }
 }
 

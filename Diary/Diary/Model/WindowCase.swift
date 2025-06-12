@@ -8,6 +8,7 @@
 import Foundation
 
 enum WindowCase {
-    case login
+    case auth
     case registr
+    case home
 }
