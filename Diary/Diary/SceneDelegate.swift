@@ -25,9 +25,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(windowScene: windowScene)
         window?.windowScene = windowScene
-        if authService.userLogin() {
+        if authService.isLogin() {
             window?.rootViewController = UINavigationController(rootViewController: windowManager(vc: .home))
-
         } else {
             window?.rootViewController = windowManager(vc: .registr)
         }

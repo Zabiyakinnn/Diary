@@ -16,6 +16,8 @@ enum PasswordMatchResult {
 
 final class RegistrViewModel {
     
+    private let service = AuthService()
+    
     /// проверка введенного пароля
     /// - Parameters:
     ///   - passwordOne: пароль
@@ -31,6 +33,12 @@ final class RegistrViewModel {
         } else {
             return .done
         }
+    }
+    
+    
+    func registrUser(email: String, password: String, nameUser: String, completion: @escaping(Result<Bool, Error>) -> Void) {
+        let user = UserData(email: email, password: password, name: nameUser)
+        service.createNewUser(user: user, completion: completion)
     }
 }
 

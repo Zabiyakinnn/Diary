@@ -73,6 +73,19 @@ final class RegistrViewController: UIViewController {
         case .done:
             print("Совпадают")
             // положительный результат, регистрация
+            let email = registrView.emailUser.text
+            let password = registrView.passwordUser.text
+            let userName = registrView.nameUser.text
+            
+            viewModel.registrUser(email: email ?? "", password: password ?? "", nameUser: userName ?? "") { result in
+                switch result {
+                case .success(_):
+                    NotificationCenter.default.post(name: Notification.Name("routeVC"), object: nil, userInfo: ["vc": WindowCase.auth])
+                case .failure(let failure):
+                    print("Ошибка регистрации \(failure)")
+                    //Alert с ошибкой
+                }
+            }
         case .misDone:
             print("Не совпадают")
             //alert с ошибкой что пароли не совпали
