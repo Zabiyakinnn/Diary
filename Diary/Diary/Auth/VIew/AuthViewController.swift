@@ -47,11 +47,32 @@ final class AuthViewController: UIViewController {
             switch result {
             case .success(_):
                 NotificationCenter.default.post(name: Notification.Name("routeVC"), object: nil, userInfo: ["vc": WindowCase.home])
-            case .failure(let failure):
-                print("Ошибка авторизации \(failure)")
-                //Alert с ошибкой
+            case .failure(let error):
+                var massage = "Неизвестная ошибка. Повторите попытку"
+                
+                if let signInError = error as? SignInError {
+                    switch signInError {
+                    case .notVerified:
+                        massage = "Email не подтвержден. Мы отправили вам повторное письмо для подтверждения"
+                    case .wrongPassword:
+                        massage = "Неверный email или пароль"
+                    case .invalidEmailFormat:
+                        massage = "Неверный Email. Введите корректные данные"
+                    }
+                } else {
+                    massage = error.localizedDescription
+                }
+                
+                self.showAlert(title: "Ошибка авторизации", massage: massage)
             }
         }
+    }
+    //показать ошибку
+    private func showAlert(title: String, massage: String) {
+        let alertController = UIAlertController(title: title, message: massage, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ок", style: .default)
+        alertController.addAction(okAction)
+        present(alertController, animated: true)
     }
 }
 

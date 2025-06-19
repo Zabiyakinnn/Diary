@@ -7,13 +7,6 @@
 
 import Foundation
 
-enum PasswordMatchResult {
-    case done // успех
-    case misDone // пароли не совпадают
-    case toShort // короткий пароль
-    case empty // остальное
-}
-
 final class RegistrViewModel {
     
     private let service = AuthService()
@@ -35,7 +28,7 @@ final class RegistrViewModel {
         }
     }
     
-    
+//    регистрация пользователя
     func registrUser(email: String, password: String, nameUser: String, completion: @escaping(Result<Bool, Error>) -> Void) {
         let user = UserData(email: email, password: password, name: nameUser)
         service.createNewUser(user: user, completion: completion)

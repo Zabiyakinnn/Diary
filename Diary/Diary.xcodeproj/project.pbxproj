@@ -20,10 +20,14 @@
 		C20C15FE2DFC173B00B3E40F /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20C15FD2DFC173B00B3E40F /* UserData.swift */; };
 		C20C16002DFC260A00B3E40F /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20C15FF2DFC260A00B3E40F /* AuthViewModel.swift */; };
 		C20C16052DFC356100B3E40F /* GeneralTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20C16042DFC356100B3E40F /* GeneralTaskViewController.swift */; };
+		C22191232E002A4600A73A11 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22191222E002A4600A73A11 /* SettingViewController.swift */; };
+		C22191262E002A5800A73A11 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22191252E002A5800A73A11 /* SettingView.swift */; };
+		C22191292E00566800A73A11 /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22191282E00566800A73A11 /* SettingViewModel.swift */; };
 		C235FE9E2DF1D4A300C73A5E /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C235FE9D2DF1D4A300C73A5E /* AuthViewController.swift */; };
 		C235FEA22DF1D4F700C73A5E /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C235FEA12DF1D4F700C73A5E /* AuthView.swift */; };
 		C235FEA52DF1E18E00C73A5E /* WindowCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C235FEA42DF1E18E00C73A5E /* WindowCase.swift */; };
 		C253912C2DFADC60002FA941 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C253912B2DFADC60002FA941 /* GoogleService-Info.plist */; };
+		C2970A332E01BCEF0083D8EB /* ErrorAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2970A322E01BCEF0083D8EB /* ErrorAuth.swift */; };
 		C2B8ECAF2DF2F6A400DB6444 /* MyTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B8ECAE2DF2F6A400DB6444 /* MyTaskViewController.swift */; };
 		C2B8ECB22DF2F73600DB6444 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B8ECB12DF2F73600DB6444 /* TabBarViewController.swift */; };
 		C2B8ECB52DF2FD6000DB6444 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B8ECB42DF2FD6000DB6444 /* AuthService.swift */; };
@@ -39,6 +43,7 @@
 		C2C7469A2DE9A69A00A73D17 /* 02_NTSomic-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C2C746962DE9A69A00A73D17 /* 02_NTSomic-Medium.ttf */; };
 		C2C7469B2DE9A69A00A73D17 /* NT Somic-VF.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C2C746972DE9A69A00A73D17 /* NT Somic-VF.ttf */; };
 		C2C7469D2DEA055E00A73D17 /* RegistrViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C7469C2DEA055E00A73D17 /* RegistrViewModel.swift */; };
+		C2FA12152E0306D9001F0709 /* PasswordMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FA12142E0306D9001F0709 /* PasswordMatch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,10 +52,14 @@
 		C20C15FD2DFC173B00B3E40F /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		C20C15FF2DFC260A00B3E40F /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		C20C16042DFC356100B3E40F /* GeneralTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralTaskViewController.swift; sourceTree = "<group>"; };
+		C22191222E002A4600A73A11 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		C22191252E002A5800A73A11 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		C22191282E00566800A73A11 /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
 		C235FE9D2DF1D4A300C73A5E /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		C235FEA12DF1D4F700C73A5E /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		C235FEA42DF1E18E00C73A5E /* WindowCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowCase.swift; sourceTree = "<group>"; };
 		C253912B2DFADC60002FA941 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C2970A322E01BCEF0083D8EB /* ErrorAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAuth.swift; sourceTree = "<group>"; };
 		C2B8ECAE2DF2F6A400DB6444 /* MyTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTaskViewController.swift; sourceTree = "<group>"; };
 		C2B8ECB12DF2F73600DB6444 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		C2B8ECB42DF2FD6000DB6444 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
@@ -68,6 +77,7 @@
 		C2C746962DE9A69A00A73D17 /* 02_NTSomic-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "02_NTSomic-Medium.ttf"; path = "../../../../Шрифты/NT Somic/02_NTSomic-Medium.ttf"; sourceTree = "<group>"; };
 		C2C746972DE9A69A00A73D17 /* NT Somic-VF.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NT Somic-VF.ttf"; path = "../../../../Шрифты/NT Somic/NT Somic-VF.ttf"; sourceTree = "<group>"; };
 		C2C7469C2DEA055E00A73D17 /* RegistrViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrViewModel.swift; sourceTree = "<group>"; };
+		C2FA12142E0306D9001F0709 /* PasswordMatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordMatch.swift; sourceTree = "<group>"; };
 		DEBCF9FF1A9C3708E529E6DC /* Pods_Diary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Diary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -116,6 +126,32 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		C22191212E002A2200A73A11 /* SettingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C22191272E00565300A73A11 /* ViewModel */,
+				C22191242E002A4A00A73A11 /* View */,
+			);
+			path = SettingViewController;
+			sourceTree = "<group>";
+		};
+		C22191242E002A4A00A73A11 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C22191222E002A4600A73A11 /* SettingViewController.swift */,
+				C22191252E002A5800A73A11 /* SettingView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C22191272E00565300A73A11 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C22191282E00566800A73A11 /* SettingViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		C235FE9B2DF1D48100C73A5E /* VIew */ = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +174,8 @@
 			children = (
 				C20C15FD2DFC173B00B3E40F /* UserData.swift */,
 				C235FEA42DF1E18E00C73A5E /* WindowCase.swift */,
+				C2970A322E01BCEF0083D8EB /* ErrorAuth.swift */,
+				C2FA12142E0306D9001F0709 /* PasswordMatch.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -195,12 +233,13 @@
 		C2C746762DE99A3700A73D17 /* Diary */ = {
 			isa = PBXGroup;
 			children = (
+				C2C746932DE9A68700A73D17 /* Fonts */,
+				C235FEA32DF1E18000C73A5E /* Model */,
+				C22191212E002A2200A73A11 /* SettingViewController */,
+				C2B8ECAC2DF2F66500DB6444 /* MyTask */,
 				C20C16012DFC353400B3E40F /* GeneralTask */,
 				C2B8ECB32DF2FD4F00DB6444 /* Service */,
-				C235FEA32DF1E18000C73A5E /* Model */,
-				C2C746932DE9A68700A73D17 /* Fonts */,
 				C2B8ECB02DF2F71700DB6444 /* TabBarViewController */,
-				C2B8ECAC2DF2F66500DB6444 /* MyTask */,
 				C2C7468C2DE99FD800A73D17 /* Auth */,
 				C2C7468B2DE99FD000A73D17 /* Registr */,
 				C2C746772DE99A3700A73D17 /* AppDelegate.swift */,
@@ -405,17 +444,22 @@
 				C20C15FE2DFC173B00B3E40F /* UserData.swift in Sources */,
 				C2C746922DE9A02800A73D17 /* RegistrViewController.swift in Sources */,
 				C2C7469D2DEA055E00A73D17 /* RegistrViewModel.swift in Sources */,
+				C22191232E002A4600A73A11 /* SettingViewController.swift in Sources */,
 				C2B8ECB22DF2F73600DB6444 /* TabBarViewController.swift in Sources */,
+				C2970A332E01BCEF0083D8EB /* ErrorAuth.swift in Sources */,
 				C2B8ECB52DF2FD6000DB6444 /* AuthService.swift in Sources */,
 				C2C7467C2DE99A3700A73D17 /* ViewController.swift in Sources */,
+				C22191292E00566800A73A11 /* SettingViewModel.swift in Sources */,
 				C235FE9E2DF1D4A300C73A5E /* AuthViewController.swift in Sources */,
 				C2C746782DE99A3700A73D17 /* AppDelegate.swift in Sources */,
+				C22191262E002A5800A73A11 /* SettingView.swift in Sources */,
 				C2C7467A2DE99A3700A73D17 /* SceneDelegate.swift in Sources */,
 				C20C16052DFC356100B3E40F /* GeneralTaskViewController.swift in Sources */,
 				C235FEA52DF1E18E00C73A5E /* WindowCase.swift in Sources */,
 				C20C16002DFC260A00B3E40F /* AuthViewModel.swift in Sources */,
 				C2B8ECAF2DF2F6A400DB6444 /* MyTaskViewController.swift in Sources */,
 				C235FEA22DF1D4F700C73A5E /* AuthView.swift in Sources */,
+				C2FA12152E0306D9001F0709 /* PasswordMatch.swift in Sources */,
 				C2C746902DE9A01700A73D17 /* RegistrView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

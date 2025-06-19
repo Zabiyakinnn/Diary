@@ -9,10 +9,6 @@ import Foundation
 import FirebaseAuth
 import Firebase
 
-enum SignInError: Error {
-    case invalidUser
-    case notVerified
-}
 
 final class AuthService {
     
@@ -23,24 +19,51 @@ final class AuthService {
     func createNewUser(user: UserData, completion: @escaping (Result<Bool, Error>) -> Void) {
         Auth.auth().createUser(withEmail: user.email, password: user.password) { [weak self] result, err in
             guard let self = self else { return }
-            guard err == nil else {
-                print(err!)
-                completion(.failure(err!))
-                return
-            }
+//            guard err == nil else {
+//                print(err!)
+//                completion(.failure(err!))
+//                return
+//            }
             
-            result?.user.sendEmailVerification()
-            
-//            save name
-            guard let userId = result?.user.uid else { return }
-            setUserData(user: user, userId: userId) { [weak self] isAdd in
-                if isAdd {
-                    self?.signOut()
-                    completion(.success(true))
-                } else {
+            if let error = err as? NSError {
+                let code = AuthErrorCode.Code(rawValue: error.code)
+                
+                print("Error-----\(error)")
+                
+                switch code {
+                case .emailAlreadyInUse:
+                    print("Email зарегестрирован")
+                    completion(.failure(EmailVarification.emailAlreadyInUse))
+                    return
+                case .invalidEmail:
+                    print("Некореткный email")
+                    completion(.failure(EmailVarification.invalidEmail))
+                    return
+                case .networkError:
+                    print("Проблемы с сетью")
+                    completion(.failure(EmailVarification.networkError))
+                    return
+                default:
+                    print("Другая ошибка регистрации \(error.localizedDescription)")
+                    completion(.failure(EmailVarification.otherError))
                     return
                 }
             }
+            
+            result?.user.sendEmailVerification()
+            signOut()
+            completion(.success(true))
+
+//            save name
+//            guard let userId = result?.user.uid else { return }
+//            setUserData(user: user, userId: userId) { [weak self] isAdd in
+//                if isAdd {
+//                    self?.signOut()
+//                    completion(.success(true))
+//                } else {
+//                    return
+//                }
+//            }
         }
     }
     
@@ -71,21 +94,40 @@ final class AuthService {
     func signIn(user: UserData, completion: @escaping(Result<Bool, Error>) -> Void) {
         Auth.auth().signIn(withEmail: user.email, password: user.password) { [weak self] result, err in
             guard let self = self else { return }
-            guard err == nil else {
-                print(err!)
-                completion(.failure(err!))
-                return
+            
+            if let error = err as? NSError {
+                let code = AuthErrorCode.Code(rawValue: error.code)
+                
+                switch code {
+                case .invalidEmail:
+                    print("Неверный формат email")
+                    completion(.failure(SignInError.invalidEmailFormat))
+                    return
+                case .wrongPassword, .invalidCredential:
+                    print("Неверный пароль")
+                    completion(.failure(SignInError.wrongPassword))
+                    return
+                case .appNotVerified:
+                    print("Пользователь не прошел верефикацию")
+                    completion(.failure(SignInError.notVerified))
+                    return
+                default:
+                    print("Другая ошибка: \(code?.rawValue ?? -1) - \(error.localizedDescription)")
+                    return
+                }
             }
             
             guard let user = result?.user else {
                 //пользователь не найден
-                completion(.failure(SignInError.invalidUser))
+                completion(.failure(SignInError.wrongPassword))
+                print("Error email and password")
                 return
             }
             
             if !user.isEmailVerified {
                 //пользователь не верефецирован
                 completion(.failure(SignInError.notVerified))
+                print("Error not verified")
                 result?.user.sendEmailVerification() // повторное письмо верефикации пользователя
                 signOut()
                 return

@@ -26,9 +26,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         window?.windowScene = windowScene
         if authService.isLogin() {
-            window?.rootViewController = UINavigationController(rootViewController: windowManager(vc: .home))
+            window?.rootViewController = windowManager(vc: .home)
         } else {
-            window?.rootViewController = windowManager(vc: .registr)
+            window?.rootViewController = windowManager(vc: .auth)
         }
         
         window?.makeKeyAndVisible()
@@ -52,7 +52,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let newRoot: UIViewController
         switch vc {
         case .home:
-            newRoot = UINavigationController(rootViewController: windowManager(vc: vc))
+            newRoot = windowManager(vc: vc)
         default:
             newRoot = windowManager(vc: vc)
         }

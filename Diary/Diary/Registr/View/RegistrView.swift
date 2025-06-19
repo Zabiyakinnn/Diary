@@ -166,6 +166,13 @@ final class RegistrView: UIView {
         return textField
     }()
     
+//    индикатор загрузки при регистрации
+    lazy var activityIndicator: UIActivityIndicatorView = {
+        let indicator = UIActivityIndicatorView(style: .medium)
+        indicator.tintColor = UIColor.gray
+        return indicator
+    }()
+    
 //    Разделительная линия
     private lazy var seperatorLineNameUser: UIView = {
         let view = UIView()
@@ -203,6 +210,7 @@ extension RegistrView {
         addSubview(yesAccount)
         addSubview(registrButton)
         addSubview(returnPasswordUser)
+        addSubview(activityIndicator)
         
         nameUser.addSubview(seperatorLineNameUser)
         emailUser.addSubview(seperatorLineEmailUser)
@@ -214,6 +222,10 @@ extension RegistrView {
         registrText.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.top.equalToSuperview().inset(75)
+        }
+        activityIndicator.snp.makeConstraints { make in
+            make.right.equalToSuperview().offset(-20)
+            make.centerY.equalTo(registrText)
         }
         nameUser.snp.makeConstraints { make in
             make.top.equalTo(registrText.snp.bottom).offset(45)

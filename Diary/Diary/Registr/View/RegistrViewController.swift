@@ -67,6 +67,7 @@ final class RegistrViewController: UIViewController {
 
     
     @objc func registrButtonTapped() {
+        registrView.activityIndicator.startAnimating()
         
         let result = viewModel.checkPassword(passwordOne, passwordTwo)
         switch result {
@@ -75,28 +76,56 @@ final class RegistrViewController: UIViewController {
             // положительный результат, регистрация
             let email = registrView.emailUser.text
             let password = registrView.passwordUser.text
-            let userName = registrView.nameUser.text
-            
-            viewModel.registrUser(email: email ?? "", password: password ?? "", nameUser: userName ?? "") { result in
+//            let userName = registrView.nameUser.text
+//            NotificationCenter.default.post(name: Notification.Name("routeVC"), object: nil, userInfo: ["vc": WindowCase.auth])
+            viewModel.registrUser(email: email ?? "", password: password ?? "", nameUser: "") { result in
                 switch result {
                 case .success(_):
                     NotificationCenter.default.post(name: Notification.Name("routeVC"), object: nil, userInfo: ["vc": WindowCase.auth])
-                case .failure(let failure):
-                    print("Ошибка регистрации \(failure)")
-                    //Alert с ошибкой
+                case .failure(let error):
+                    var massage = "Неизвестная ошибка. Повторите попытку"
+                    
+                    if let emailVArification = error as? EmailVarification {
+                        switch emailVArification {
+                        case .invalidEmail:
+                            massage = "Неверный Email"
+                        case .emailAlreadyInUse:
+                            massage = "Данный Email уже зарегистрирован"
+                        case .networkError:
+                            massage = "Ошибка с сетью. Повторите попытку"
+                        case .otherError:
+                            massage = "Неизвестная ошибка. Повторите попытку"
+                        }
+                    } else {
+                        massage = error.localizedDescription
+                    }
+                    
+                    self.showAlert(title: "Ошибка регистрации", massage: massage)
                 }
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.7) {
+                self.registrView.activityIndicator.stopAnimating()
             }
         case .misDone:
             print("Не совпадают")
             //alert с ошибкой что пароли не совпали
             showAlert(title: "Ошибка", massage: "Пароли не совпадают")
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                self.registrView.activityIndicator.stopAnimating()
+            }
         case .toShort:
             print("короткий пароль")
             //alert с ошибкой что пароль слишком короткий
             showAlert(title: "Ошибка", massage: "Пароль должен содержать более шести символов")
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                self.registrView.activityIndicator.stopAnimating()
+            }
         case .empty:
             print("Остальное")
             showAlert(title: "Ошибка", massage: "Заполните все поля и повторите попытку")
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                self.registrView.activityIndicator.stopAnimating()
+            }
         }
     }
     
